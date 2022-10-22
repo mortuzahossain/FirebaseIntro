@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        switch viewRouter.currentPage {
+        case .signUp:
+            SignUpView()
+        case .signIn:
+            SignInView()
+        case .homePage:
+            HomeView()
+       }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ViewRouter())
     }
 }
