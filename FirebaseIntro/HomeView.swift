@@ -9,6 +9,7 @@ import SwiftUI
 import Firebase
 
 struct Book:Codable,  Identifiable , Hashable{
+ 
   var id: String = UUID().uuidString
   var title: String
   var author: String
@@ -23,6 +24,7 @@ struct HomeView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     let email = Auth.auth().currentUser?.email ?? ""
     @ObservedObject var viewModel = BooksViewModel()
+    let db = Firestore.firestore()
     
     var body: some View {
         NavigationView {
@@ -78,7 +80,6 @@ struct HomeView: View {
     }
     
     func addIntoFirease(){
-        let db = Firestore.firestore()
         let id = Int.random(in: 0..<100)
         let book = Book(title: "Random book - \(id)", author: "Random author - \(id)")
         db.collection("books").document().setData(book.dictionary)
@@ -86,7 +87,9 @@ struct HomeView: View {
     
     func deleteFromFirebase(offsets:IndexSet){
         for index in offsets {
+            print(viewModel.books[index].id)
             print(viewModel.books[index].title)
+            db.collection("books").document(viewModel.books[index].id).delete()
         }
     }
 }

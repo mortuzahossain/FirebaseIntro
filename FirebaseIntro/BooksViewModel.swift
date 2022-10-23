@@ -23,10 +23,12 @@ class BooksViewModel: ObservableObject {
 
           self.books = documents.map { queryDocumentSnapshot -> Book in
             let data = queryDocumentSnapshot.data()
+              
+            let id = queryDocumentSnapshot.documentID
             let title = data["title"] as? String ?? ""
             let author = data["author"] as? String ?? ""
 
-            return Book(id: .init(), title: title, author: author)
+            return Book(id: id, title: title, author: author)
           }
         }
       }
