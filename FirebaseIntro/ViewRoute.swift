@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Firebase
 
 enum Page {
     case signUp
@@ -14,5 +15,5 @@ enum Page {
 }
 
 class ViewRouter:ObservableObject {
-    @Published var currentPage:Page = .signIn
+    @Published var currentPage:Page = Auth.auth().currentUser?.email ?? "" == "" ? .signIn : .homePage
 }

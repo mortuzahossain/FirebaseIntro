@@ -18,6 +18,7 @@
 		732B46D728FC5381003CE1AB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 732B46D628FC5381003CE1AB /* FirebaseAuth */; };
 		732B46D928FC5381003CE1AB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 732B46D828FC5381003CE1AB /* FirebaseFirestore */; };
 		732B46DB28FC6809003CE1AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 732B46DA28FC6809003CE1AB /* GoogleService-Info.plist */; };
+		736832612905910100E219A2 /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736832602905910100E219A2 /* BooksViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		732B46D128FC3B98003CE1AB /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		732B46D328FC3F39003CE1AB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		732B46DA28FC6809003CE1AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		736832602905910100E219A2 /* BooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				732B46DA28FC6809003CE1AB /* GoogleService-Info.plist */,
 				732B46D128FC3B98003CE1AB /* SignUpView.swift */,
 				732B46D328FC3F39003CE1AB /* HomeView.swift */,
+				736832602905910100E219A2 /* BooksViewModel.swift */,
 			);
 			path = FirebaseIntro;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				732B46C228FC3900003CE1AB /* ContentView.swift in Sources */,
 				732B46D228FC3B98003CE1AB /* SignUpView.swift in Sources */,
 				732B46C028FC3900003CE1AB /* FirebaseIntroApp.swift in Sources */,
+				736832612905910100E219A2 /* BooksViewModel.swift in Sources */,
 				732B46D428FC3F39003CE1AB /* HomeView.swift in Sources */,
 				732B46D028FC39B6003CE1AB /* SignInView.swift in Sources */,
 				732B46CE28FC3936003CE1AB /* ViewRoute.swift in Sources */,
